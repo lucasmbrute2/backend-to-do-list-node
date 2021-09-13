@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Connect = (url,user,password,banco)=>{
     mongoose.connect(`${url}/${banco}`,{
         user: user,
-        password: password,
+        pass: password,
         useNewUrlParser: true,
         useUnifiedTopology: true
     }).then(()=>console.log('MongoDB connected'))
