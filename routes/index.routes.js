@@ -10,10 +10,6 @@ router.post('/add',controller.post);
 
 router.put('/edit/:id',controller.put);
 
-
-router.delete('/delete/:id',controller.deleteId);
-
-
-
+router.delete('/delete/:id',controller.delete);
 
 module.exports = router;

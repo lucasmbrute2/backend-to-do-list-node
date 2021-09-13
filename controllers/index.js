@@ -14,7 +14,7 @@ module.exports ={
     post: async (req,res)=>{
         if(req.body && req.body.titulo && req.body.descricao && req.body.prioridade && req.body.estado && req.body.estado){
             await toDoModel.create(req.body)
-            .then(res.status(201).send('Ok'))
+            .then(res.status(201).send('Adicionado com sucesso.'))
         }else{
             res.status(404).send('erro')
         }
@@ -25,14 +25,10 @@ module.exports ={
         .catch(err=>res.status(404).send(err))
     },
 
-    deleteId: async (req,res)=>{
+    delete: async (req,res)=>{
         await toDoModel.deleteOne({ _id: req.params.id })
         .then(res.status(200).send('Deletado com sucesso!'))
         .catch(err=>res.status(404).send(err))
-    },
-    deleteAll: async (req,res)=>{
-        await toDoModel.deleteMany({})
-        .then(res.status(200).send('Todos os itens foram apagados.'))
-        .catch(err=>res.status(400).send(err))
     }
+   
 }
