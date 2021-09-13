@@ -21,7 +21,7 @@ app.use(express.json());
 app.use('/tarefas',tarefaRota);
 app.use(cors(corsOptions));
 app.get('/',(req,res)=>{
-    res.send('Errou o EndPoint ai rs')
+    res.send('Errou o EndPoint ai rsS')
 });
 app.listen(process.env.PORT || port,()=>{
     console.info(`Servidor rodando em http://localhost:${port}`)
