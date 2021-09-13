@@ -12,7 +12,7 @@ const port = 3003;
 const Connect = require('./connect/connect');
 const db_url = process.env.DB_URL;
 const db_user= process.env.DB_USER;
-const db_password= process.env.DB_PASS;
+const db_password= process.env.DB_PASSWORD;
 const db_data= process.env.DB_DATA;
 const tarefaRota = require('./routes/index.routes');
 
