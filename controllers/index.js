@@ -14,7 +14,7 @@ module.exports ={
     post: async (req,res)=>{
         if(req.body && req.body.titulo && req.body.descricao && req.body.prioridade && req.body.estado && req.body.estado){
             await toDoModel.create(req.body)
-            .then(tarefa=>res.status(201).send(tarefa))
+            .then(res.status(201).send('Ok'))
         }else{
             res.status(404).send('erro')
         }
