@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Connect = (url,user,password,banco)=>{
-    mongoose.connect(`${url}${banco}`,{
+    mongoose.connect(`${url}/${banco}`,{
         user: user,
         pass: password,
         useNewUrlParser: true,
