@@ -1,15 +1,9 @@
 if(process.env.NODE_ENV!== 'production'){
     require('dotenv').config();
 };
-const whitelist = ['http://192.168.100.14:3000','http://localhost:3000' ]
 const corsOptions = {
-    origin: function (origin,callback){
-        if(whitelist.indexOf(origin)!==-1){
-            callback(null,true)
-        }else{
-            callback(new Error('Not allowed by Cors'))
-        }
-    }
+    origin: "http://192.168.100.14:3000",
+    optionSucessStatus: 200
 };
 const cors = require('cors');
 const express = require('express');
