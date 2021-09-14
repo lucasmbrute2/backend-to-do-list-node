@@ -16,10 +16,10 @@ const db_password= process.env.DB_PASSWORD;
 const db_data= process.env.DB_DATA;
 const tarefaRota = require('./routes/index.routes');
 
+app.use(cors());
 Connect(db_url,db_user,db_password,db_data);
 app.use(express.json());
 app.use('/tarefas',tarefaRota);
-app.use(cors());
 app.get('/',(req,res)=>{
     res.send('Errou o EndPoint ai rs')
 });
