@@ -19,7 +19,7 @@ const tarefaRota = require('./routes/index.routes');
 Connect(db_url,db_user,db_password,db_data);
 app.use(express.json());
 app.use('/tarefas',tarefaRota);
-app.use(cors(corsOptions));
+app.use(cors());
 app.get('/',(req,res)=>{
     res.send('Errou o EndPoint ai rs')
 });
