@@ -2,7 +2,7 @@ if(process.env.NODE_ENV!== 'production'){
     require('dotenv').config();
 };
 const corsOptions = {
-    origin: "http://192.168.100.14:3000",
+    origin: "http://localhost:3000",
     optionSucessStatus: 200
 };
 const cors = require('cors');
@@ -16,7 +16,7 @@ const db_password= process.env.DB_PASSWORD;
 const db_data= process.env.DB_DATA;
 const tarefaRota = require('./routes/index.routes');
 
-app.use(cors());
+app.use(cors(corsOptions));
 Connect(db_url,db_user,db_password,db_data);
 app.use(express.json());
 app.use('/tarefas',tarefaRota);
